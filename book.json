@@ -5,9 +5,7 @@
     "description": "这是一本关于...的划时代巨著",
     "gitbook": "3.7.3",
     "plugins": [
-        "-sharing",
-        "prism",
-        "prism-themes"
+        "-sharing"
     ],
 
     "pluginsConfig": {
