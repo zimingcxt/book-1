@@ -1,0 +1,18 @@
+{
+  "name": "mbook-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d _book"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "honkit-plugin-prism": "^2.5.3",
+    "prism-themes": "^1.9.0"
+  }
+}

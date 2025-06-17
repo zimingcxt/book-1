@@ -1,0 +1,20 @@
+{
+
+    "title": "我的新一代神书",
+    "author": "zimingcxt",
+    "description": "这是一本关于...的划时代巨著",
+    "gitbook": "3.7.3",
+    "plugins": [
+        "-sharing",
+        "prism",
+        "prism-themes"
+    ],
+
+    "pluginsConfig": {
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-tomorrow.css"
+            ]
+        }
+    }
+}
