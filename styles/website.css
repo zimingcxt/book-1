@@ -1,0 +1,113 @@
+/*
+ * styles/website.css
+ *
+ * 这是 HonKit 项目的自定义 CSS 文件。
+ * 所有的自定义样式都将在这里定义。
+ */
+
+
+/* --- 1. 引入外部字体 --- */
+
+/* 引入英文字体：Inter (来自 Google Fonts) */
+/* 包含字重：Regular(400), Medium(500), Bold(700) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* 引入中文字体：Noto Serif SC (思源宋体简体中文版，来自 Google Fonts) */
+/* 包含字重：ExtraLight(200), Regular(400), Bold(700) - 可以根据需求调整范围 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700&display=swap');
+
+/* 引入代码块字体：Source Code Pro (来自 Google Fonts) */
+/* 包含字重：Regular(400), Bold(700) */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+
+/* --- 2. 页面基础字体设置 --- */
+
+/* 为整个网页设置默认字体：优先英文字体，再中文字体，最后通用备用字体 */
+body {
+    /* 主要字体组合 */
+    font-family: 'Inter',                 /* 优先用于英文字符、数字和西文标点 */
+                 'Noto Serif SC',         /* 中文字体，用于中文字符 */
+                 'Source Han Serif SC',   /* 备用思源宋体名称 */
+                 '思源宋体',              /* 系统自带思源宋体名称 */
+                 'Songti SC',             /* macOS 上的宋体备用 */
+                 'STSong',                /* Windows 上的宋体备用 */
+                 serif;                   /* 衬线字体家族作为最终备用 */
+    line-height: 1.6; /* 增加行高，提升阅读舒适度 */
+    font-size: 16px;  /* 基础字体大小，可根据需求调整 */
+}
+
+
+/* --- 3. 标题字体设置 --- */
+
+/* 针对所有标题 (h1-h6) 应用与正文相同的字体优先级 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter',
+                 'Noto Serif SC', 'Source Han Serif SC', '思源宋体',
+                 'Songti SC', 'STSong',
+                 serif;
+    /* 你也可以为标题设置特定的字重，例如： */
+    /* font-weight: 700; */ /* 使标题更粗 */
+}
+
+/* --- 4. 代码块字体设置 --- */
+
+/* 针对行内代码 (<code>) 和代码块 (<pre>) 设置等宽字体 */
+/* 使用 !important 确保覆盖 HonKit 或浏览器的默认样式 */
+code,
+pre {
+    font-family: 'Source Code Pro',     /* 优先使用 Source Code Pro */
+                 'JetBrains Mono',      /* 备用等宽字体1 */
+                 'Fira Code',           /* 备用等宽字体2 (支持连字) */
+                 'Consolas',            /* Windows 经典等宽字体 */
+                 'Monaco',              /* macOS 经典等宽字体 */
+                 monospace !important;  /* 最终的通用等宽字体家族 */
+    line-height: 1.5; /* 代码块通常需要稍微紧凑的行高 */
+    font-size: 0.95em; /* 可以略微缩小代码字体 */
+}
+
+/* 针对 HonKit 特定的代码块容器，确保字体应用到位 */
+/* 这种更具体的选择器可以进一步提高优先级，防止被主题样式覆盖 */
+.book .book-body .body-inner pre code,
+.book .book-body .body-inner code {
+    font-family: 'Source Code Pro', 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace !important;
+}
+
+/* --- 5. 其他可能的 HonKit 元素调整 --- */
+
+/* 如果你需要更精细地控制正文段落和列表项的字体，以确保覆盖主题默认值 */
+.book .book-body .body-inner .page-wrapper .page-inner section.normal p,
+.book .book-body .body-inner .page-wrapper .page-inner section.normal li {
+    font-family: 'Inter',
+                 'Noto Serif SC', 'Source Han Serif SC', '思源宋体',
+                 'Songti SC', 'STSong',
+                 serif !important;
+}
+
+/* 导航栏和目录的字体 (如果需要调整的话) */
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+    font-family: 'Inter',
+                 'Noto Serif SC', 'Source Han Serif SC', '思源宋体',
+                 'Songti SC', 'STSong',
+                 sans-serif; /* 导航通常更适合无衬线字体 */
+}
+
+/* 增加链接下划线，以提高可读性 */
+a {
+    text-decoration: underline;
+}
+
+/* 调整链接颜色 */
+/* a:link { color: #007bff; } */
+/* a:visited { color: #6610f2; } */
+/* a:hover { color: #0056b3; } */
+/* a:active { color: #004085; } */
+
+/* 额外的自定义样式可以在这里添加 */
+/* 例如，调整页面边距、行高、背景色等 */
+/*
+.page-inner {
+    padding: 20px 40px;
+}
+*/
