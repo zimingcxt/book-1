@@ -104,10 +104,55 @@
        }
    }
    ```
-   ### 4.目录插入
+   ### 4.目录插入(该方案中文标签有bug,已废弃)
 
    插入方式,在想要的位置(一般在标题下方)输入即可:
 
    ```Bash
    <!-- toc -->
+   ```
+   当前使用"anchor-navigation-ex""back-to-top-button"插件:
+   安装方式:
+
+   ```
+   npm install gitbook-plugin-anchor-navigation-ex --save-dev
+   ```
+
+   ```Bash
+   {
+       "title": "我的一本书",
+       "author": "zimingcxt",
+       "description": "这是一本没什么用的笔记",
+       "plugins": [
+           "-sharing",
+           "collapsible-chapters",
+           "search-plus",
+           "-search",
+           "back-to-top-button",
+           "fontsettings",
+           "code",
+           "splitter",
+           "prism",
+           "anchor-navigation-ex" //<--在这
+       ],
+       "pluginsConfig": {
+           "prism": {
+               "css": [
+                   "prismjs/themes/prism-tomorrow.css"
+               ]
+           },
+           "anchor-navigation-ex": {
+               "showLevel": true,
+               "multipleH1": false,
+               "mode": "float",
+               "float": {
+                   "floatIcon": "fa fa-navicon",
+                   "showLevelIcon": false,
+                   "level1Icon": "fa fa-hand-o-right",
+                   "level2Icon": "fa fa-hand-o-right",
+                   "level3Icon": "fa fa-hand-o-right"
+               }
+           }
+       }
+   }
    ```
