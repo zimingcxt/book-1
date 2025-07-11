@@ -1,11 +1,20 @@
 {
 
-    "title": "我的新一代神书",
+    "title": "我的一本书",
     "author": "zimingcxt",
-    "description": "这是一本关于...的划时代巨著",
+    "description": "这是一本没什么用的笔记",
     "gitbook": "3.7.3",
     "plugins": [
-        "-sharing"
+        "-sharing",
+        "collapsible-chapters",
+        "search-plus", 
+        "-search",
+        "back-to-top-button",
+        "anchor-navigation-ex", 
+        "fontsettings",
+        "code",
+        "-splitter",
+        "prism" 
     ],
 
     "pluginsConfig": {
@@ -13,6 +22,18 @@
             "css": [
                 "prismjs/themes/prism-tomorrow.css"
             ]
+        },
+        "anchor-navigation-ex": {
+            "showLevel": true,
+            "multipleH1": false,
+            "mode": "float",
+            "float": {
+                "floatIcon": "fa fa-navicon",
+                "showLevelIcon": false,
+                "level1Icon": "fa fa-hand-o-right",
+                "level2Icon": "fa fa-hand-o-right",
+                "level3Icon": "fa fa-hand-o-right"
+            }
         }
     }
 }
