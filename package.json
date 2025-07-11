@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d _book"
+    "deploy": "gh-pages -d _book",
+    "serve": "honkit serve",
+    "build": "honkit build"
   },
   "keywords": [],
   "author": "",
